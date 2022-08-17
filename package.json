@@ -2,9 +2,8 @@
   "name": "odata-ts-types",
   "version": "0.0.1",
   "description": "Generate TypeScript types from OData metadata",
-  "main": "",
-  "scripts": {
-  },
+  "main": "index.js",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jbm1991/odata-ts-types.git"
@@ -19,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/jbm1991/odata-ts-types/issues"
   },
-  "homepage": "https://github.com/jbm1991/odata-ts-types#readme"
+  "homepage": "https://github.com/jbm1991/odata-ts-types#readme",
+  "dependencies": {
+    "fast-xml-parser": "^4.0.9",
+    "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.7.6",
+    "@types/yargs": "^17.0.11"
+  }
 }

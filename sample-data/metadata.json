@@ -1,0 +1,1693 @@
+{
+    "?xml": {
+        "@_version": 1,
+        "@_encoding": "utf-8"
+    },
+    "Edmx": {
+        "DataServices": {
+            "Schema": [
+                {
+                    "EntityType": [
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "CategoryID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "CategoryID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false,
+                                    "@_StoreGeneratedPattern": "Identity"
+                                },
+                                {
+                                    "@_Name": "CategoryName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "Description",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": "max"
+                                },
+                                {
+                                    "@_Name": "Picture",
+                                    "@_Type": "Edm.Binary",
+                                    "@_MaxLength": "max"
+                                }
+                            ],
+                            "NavigationProperty": {
+                                "@_Name": "Products",
+                                "@_Type": "Collection(NorthwindModel.Product)",
+                                "@_Partner": "Category"
+                            },
+                            "@_Name": "Category"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "CustomerTypeID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "CustomerTypeID",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 10
+                                },
+                                {
+                                    "@_Name": "CustomerDesc",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": "max"
+                                }
+                            ],
+                            "NavigationProperty": {
+                                "@_Name": "Customers",
+                                "@_Type": "Collection(NorthwindModel.Customer)",
+                                "@_Partner": "CustomerDemographics"
+                            },
+                            "@_Name": "CustomerDemographic"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "CustomerID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "CustomerID",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 5
+                                },
+                                {
+                                    "@_Name": "CompanyName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "ContactName",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 30
+                                },
+                                {
+                                    "@_Name": "ContactTitle",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 30
+                                },
+                                {
+                                    "@_Name": "Address",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 60
+                                },
+                                {
+                                    "@_Name": "City",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "Region",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "PostalCode",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 10
+                                },
+                                {
+                                    "@_Name": "Country",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "Phone",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 24
+                                },
+                                {
+                                    "@_Name": "Fax",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 24
+                                }
+                            ],
+                            "NavigationProperty": [
+                                {
+                                    "@_Name": "Orders",
+                                    "@_Type": "Collection(NorthwindModel.Order)",
+                                    "@_Partner": "Customer"
+                                },
+                                {
+                                    "@_Name": "CustomerDemographics",
+                                    "@_Type": "Collection(NorthwindModel.CustomerDemographic)",
+                                    "@_Partner": "Customers"
+                                }
+                            ],
+                            "@_Name": "Customer"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "EmployeeID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "EmployeeID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false,
+                                    "@_StoreGeneratedPattern": "Identity"
+                                },
+                                {
+                                    "@_Name": "LastName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 20
+                                },
+                                {
+                                    "@_Name": "FirstName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 10
+                                },
+                                {
+                                    "@_Name": "Title",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 30
+                                },
+                                {
+                                    "@_Name": "TitleOfCourtesy",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 25
+                                },
+                                {
+                                    "@_Name": "BirthDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "HireDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "Address",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 60
+                                },
+                                {
+                                    "@_Name": "City",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "Region",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "PostalCode",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 10
+                                },
+                                {
+                                    "@_Name": "Country",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "HomePhone",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 24
+                                },
+                                {
+                                    "@_Name": "Extension",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 4
+                                },
+                                {
+                                    "@_Name": "Photo",
+                                    "@_Type": "Edm.Binary",
+                                    "@_MaxLength": "max"
+                                },
+                                {
+                                    "@_Name": "Notes",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": "max"
+                                },
+                                {
+                                    "@_Name": "ReportsTo",
+                                    "@_Type": "Edm.Int32"
+                                },
+                                {
+                                    "@_Name": "PhotoPath",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 255
+                                }
+                            ],
+                            "NavigationProperty": [
+                                {
+                                    "@_Name": "Employees1",
+                                    "@_Type": "Collection(NorthwindModel.Employee)",
+                                    "@_Partner": "Employee1"
+                                },
+                                {
+                                    "ReferentialConstraint": {
+                                        "@_Property": "ReportsTo",
+                                        "@_ReferencedProperty": "EmployeeID"
+                                    },
+                                    "@_Name": "Employee1",
+                                    "@_Type": "NorthwindModel.Employee",
+                                    "@_Partner": "Employees1"
+                                },
+                                {
+                                    "@_Name": "Orders",
+                                    "@_Type": "Collection(NorthwindModel.Order)",
+                                    "@_Partner": "Employee"
+                                },
+                                {
+                                    "@_Name": "Territories",
+                                    "@_Type": "Collection(NorthwindModel.Territory)",
+                                    "@_Partner": "Employees"
+                                }
+                            ],
+                            "@_Name": "Employee"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": [
+                                    {
+                                        "@_Name": "OrderID"
+                                    },
+                                    {
+                                        "@_Name": "ProductID"
+                                    }
+                                ]
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "OrderID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "ProductID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "UnitPrice",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Nullable": false,
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                },
+                                {
+                                    "@_Name": "Quantity",
+                                    "@_Type": "Edm.Int16",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "Discount",
+                                    "@_Type": "Edm.Single",
+                                    "@_Nullable": false
+                                }
+                            ],
+                            "NavigationProperty": [
+                                {
+                                    "ReferentialConstraint": {
+                                        "@_Property": "OrderID",
+                                        "@_ReferencedProperty": "OrderID"
+                                    },
+                                    "@_Name": "Order",
+                                    "@_Type": "NorthwindModel.Order",
+                                    "@_Nullable": false,
+                                    "@_Partner": "Order_Details"
+                                },
+                                {
+                                    "ReferentialConstraint": {
+                                        "@_Property": "ProductID",
+                                        "@_ReferencedProperty": "ProductID"
+                                    },
+                                    "@_Name": "Product",
+                                    "@_Type": "NorthwindModel.Product",
+                                    "@_Nullable": false,
+                                    "@_Partner": "Order_Details"
+                                }
+                            ],
+                            "@_Name": "Order_Detail"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "OrderID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "OrderID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false,
+                                    "@_StoreGeneratedPattern": "Identity"
+                                },
+                                {
+                                    "@_Name": "CustomerID",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 5
+                                },
+                                {
+                                    "@_Name": "EmployeeID",
+                                    "@_Type": "Edm.Int32"
+                                },
+                                {
+                                    "@_Name": "OrderDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "RequiredDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "ShippedDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "ShipVia",
+                                    "@_Type": "Edm.Int32"
+                                },
+                                {
+                                    "@_Name": "Freight",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                },
+                                {
+                                    "@_Name": "ShipName",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "ShipAddress",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 60
+                                },
+                                {
+                                    "@_Name": "ShipCity",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "ShipRegion",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "ShipPostalCode",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 10
+                                },
+                                {
+                                    "@_Name": "ShipCountry",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                }
+                            ],
+                            "NavigationProperty": [
+                                {
+                                    "ReferentialConstraint": {
+                                        "@_Property": "CustomerID",
+                                        "@_ReferencedProperty": "CustomerID"
+                                    },
+                                    "@_Name": "Customer",
+                                    "@_Type": "NorthwindModel.Customer",
+                                    "@_Partner": "Orders"
+                                },
+                                {
+                                    "ReferentialConstraint": {
+                                        "@_Property": "EmployeeID",
+                                        "@_ReferencedProperty": "EmployeeID"
+                                    },
+                                    "@_Name": "Employee",
+                                    "@_Type": "NorthwindModel.Employee",
+                                    "@_Partner": "Orders"
+                                },
+                                {
+                                    "@_Name": "Order_Details",
+                                    "@_Type": "Collection(NorthwindModel.Order_Detail)",
+                                    "@_Partner": "Order"
+                                },
+                                {
+                                    "ReferentialConstraint": {
+                                        "@_Property": "ShipVia",
+                                        "@_ReferencedProperty": "ShipperID"
+                                    },
+                                    "@_Name": "Shipper",
+                                    "@_Type": "NorthwindModel.Shipper",
+                                    "@_Partner": "Orders"
+                                }
+                            ],
+                            "@_Name": "Order"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "ProductID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "ProductID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false,
+                                    "@_StoreGeneratedPattern": "Identity"
+                                },
+                                {
+                                    "@_Name": "ProductName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "SupplierID",
+                                    "@_Type": "Edm.Int32"
+                                },
+                                {
+                                    "@_Name": "CategoryID",
+                                    "@_Type": "Edm.Int32"
+                                },
+                                {
+                                    "@_Name": "QuantityPerUnit",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 20
+                                },
+                                {
+                                    "@_Name": "UnitPrice",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                },
+                                {
+                                    "@_Name": "UnitsInStock",
+                                    "@_Type": "Edm.Int16"
+                                },
+                                {
+                                    "@_Name": "UnitsOnOrder",
+                                    "@_Type": "Edm.Int16"
+                                },
+                                {
+                                    "@_Name": "ReorderLevel",
+                                    "@_Type": "Edm.Int16"
+                                },
+                                {
+                                    "@_Name": "Discontinued",
+                                    "@_Type": "Edm.Boolean",
+                                    "@_Nullable": false
+                                }
+                            ],
+                            "NavigationProperty": [
+                                {
+                                    "ReferentialConstraint": {
+                                        "@_Property": "CategoryID",
+                                        "@_ReferencedProperty": "CategoryID"
+                                    },
+                                    "@_Name": "Category",
+                                    "@_Type": "NorthwindModel.Category",
+                                    "@_Partner": "Products"
+                                },
+                                {
+                                    "@_Name": "Order_Details",
+                                    "@_Type": "Collection(NorthwindModel.Order_Detail)",
+                                    "@_Partner": "Product"
+                                },
+                                {
+                                    "ReferentialConstraint": {
+                                        "@_Property": "SupplierID",
+                                        "@_ReferencedProperty": "SupplierID"
+                                    },
+                                    "@_Name": "Supplier",
+                                    "@_Type": "NorthwindModel.Supplier",
+                                    "@_Partner": "Products"
+                                }
+                            ],
+                            "@_Name": "Product"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "RegionID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "RegionID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "RegionDescription",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 50
+                                }
+                            ],
+                            "NavigationProperty": {
+                                "@_Name": "Territories",
+                                "@_Type": "Collection(NorthwindModel.Territory)",
+                                "@_Partner": "Region"
+                            },
+                            "@_Name": "Region"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "ShipperID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "ShipperID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false,
+                                    "@_StoreGeneratedPattern": "Identity"
+                                },
+                                {
+                                    "@_Name": "CompanyName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "Phone",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 24
+                                }
+                            ],
+                            "NavigationProperty": {
+                                "@_Name": "Orders",
+                                "@_Type": "Collection(NorthwindModel.Order)",
+                                "@_Partner": "Shipper"
+                            },
+                            "@_Name": "Shipper"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "SupplierID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "SupplierID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false,
+                                    "@_StoreGeneratedPattern": "Identity"
+                                },
+                                {
+                                    "@_Name": "CompanyName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "ContactName",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 30
+                                },
+                                {
+                                    "@_Name": "ContactTitle",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 30
+                                },
+                                {
+                                    "@_Name": "Address",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 60
+                                },
+                                {
+                                    "@_Name": "City",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "Region",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "PostalCode",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 10
+                                },
+                                {
+                                    "@_Name": "Country",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "Phone",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 24
+                                },
+                                {
+                                    "@_Name": "Fax",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 24
+                                },
+                                {
+                                    "@_Name": "HomePage",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": "max"
+                                }
+                            ],
+                            "NavigationProperty": {
+                                "@_Name": "Products",
+                                "@_Type": "Collection(NorthwindModel.Product)",
+                                "@_Partner": "Supplier"
+                            },
+                            "@_Name": "Supplier"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "TerritoryID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "TerritoryID",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 20
+                                },
+                                {
+                                    "@_Name": "TerritoryDescription",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 50
+                                },
+                                {
+                                    "@_Name": "RegionID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                }
+                            ],
+                            "NavigationProperty": [
+                                {
+                                    "ReferentialConstraint": {
+                                        "@_Property": "RegionID",
+                                        "@_ReferencedProperty": "RegionID"
+                                    },
+                                    "@_Name": "Region",
+                                    "@_Type": "NorthwindModel.Region",
+                                    "@_Nullable": false,
+                                    "@_Partner": "Territories"
+                                },
+                                {
+                                    "@_Name": "Employees",
+                                    "@_Type": "Collection(NorthwindModel.Employee)",
+                                    "@_Partner": "Territories"
+                                }
+                            ],
+                            "@_Name": "Territory"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": [
+                                    {
+                                        "@_Name": "CategoryName"
+                                    },
+                                    {
+                                        "@_Name": "Discontinued"
+                                    },
+                                    {
+                                        "@_Name": "ProductID"
+                                    },
+                                    {
+                                        "@_Name": "ProductName"
+                                    }
+                                ]
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "ProductID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "ProductName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "SupplierID",
+                                    "@_Type": "Edm.Int32"
+                                },
+                                {
+                                    "@_Name": "CategoryID",
+                                    "@_Type": "Edm.Int32"
+                                },
+                                {
+                                    "@_Name": "QuantityPerUnit",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 20
+                                },
+                                {
+                                    "@_Name": "UnitPrice",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                },
+                                {
+                                    "@_Name": "UnitsInStock",
+                                    "@_Type": "Edm.Int16"
+                                },
+                                {
+                                    "@_Name": "UnitsOnOrder",
+                                    "@_Type": "Edm.Int16"
+                                },
+                                {
+                                    "@_Name": "ReorderLevel",
+                                    "@_Type": "Edm.Int16"
+                                },
+                                {
+                                    "@_Name": "Discontinued",
+                                    "@_Type": "Edm.Boolean",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "CategoryName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 15
+                                }
+                            ],
+                            "@_Name": "Alphabetical_list_of_product"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "CategoryName"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "CategoryName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "CategorySales",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                }
+                            ],
+                            "@_Name": "Category_Sales_for_1997"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": [
+                                    {
+                                        "@_Name": "ProductID"
+                                    },
+                                    {
+                                        "@_Name": "ProductName"
+                                    }
+                                ]
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "ProductID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false,
+                                    "@_StoreGeneratedPattern": "Identity"
+                                },
+                                {
+                                    "@_Name": "ProductName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                }
+                            ],
+                            "@_Name": "Current_Product_List"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": [
+                                    {
+                                        "@_Name": "CompanyName"
+                                    },
+                                    {
+                                        "@_Name": "Relationship"
+                                    }
+                                ]
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "City",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "CompanyName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "ContactName",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 30
+                                },
+                                {
+                                    "@_Name": "Relationship",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 9,
+                                    "@_Unicode": false
+                                }
+                            ],
+                            "@_Name": "Customer_and_Suppliers_by_City"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": [
+                                    {
+                                        "@_Name": "CustomerName"
+                                    },
+                                    {
+                                        "@_Name": "Discount"
+                                    },
+                                    {
+                                        "@_Name": "OrderID"
+                                    },
+                                    {
+                                        "@_Name": "ProductID"
+                                    },
+                                    {
+                                        "@_Name": "ProductName"
+                                    },
+                                    {
+                                        "@_Name": "Quantity"
+                                    },
+                                    {
+                                        "@_Name": "Salesperson"
+                                    },
+                                    {
+                                        "@_Name": "ShipperName"
+                                    },
+                                    {
+                                        "@_Name": "UnitPrice"
+                                    }
+                                ]
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "ShipName",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "ShipAddress",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 60
+                                },
+                                {
+                                    "@_Name": "ShipCity",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "ShipRegion",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "ShipPostalCode",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 10
+                                },
+                                {
+                                    "@_Name": "ShipCountry",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "CustomerID",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 5
+                                },
+                                {
+                                    "@_Name": "CustomerName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "Address",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 60
+                                },
+                                {
+                                    "@_Name": "City",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "Region",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "PostalCode",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 10
+                                },
+                                {
+                                    "@_Name": "Country",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "Salesperson",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 31
+                                },
+                                {
+                                    "@_Name": "OrderID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "OrderDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "RequiredDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "ShippedDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "ShipperName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "ProductID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "ProductName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "UnitPrice",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Nullable": false,
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                },
+                                {
+                                    "@_Name": "Quantity",
+                                    "@_Type": "Edm.Int16",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "Discount",
+                                    "@_Type": "Edm.Single",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "ExtendedPrice",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                },
+                                {
+                                    "@_Name": "Freight",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                }
+                            ],
+                            "@_Name": "Invoice"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": [
+                                    {
+                                        "@_Name": "Discount"
+                                    },
+                                    {
+                                        "@_Name": "OrderID"
+                                    },
+                                    {
+                                        "@_Name": "ProductID"
+                                    },
+                                    {
+                                        "@_Name": "ProductName"
+                                    },
+                                    {
+                                        "@_Name": "Quantity"
+                                    },
+                                    {
+                                        "@_Name": "UnitPrice"
+                                    }
+                                ]
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "OrderID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "ProductID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "ProductName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "UnitPrice",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Nullable": false,
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                },
+                                {
+                                    "@_Name": "Quantity",
+                                    "@_Type": "Edm.Int16",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "Discount",
+                                    "@_Type": "Edm.Single",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "ExtendedPrice",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                }
+                            ],
+                            "@_Name": "Order_Details_Extended"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "OrderID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "OrderID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "Subtotal",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                }
+                            ],
+                            "@_Name": "Order_Subtotal"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": [
+                                    {
+                                        "@_Name": "CompanyName"
+                                    },
+                                    {
+                                        "@_Name": "OrderID"
+                                    }
+                                ]
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "OrderID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "CustomerID",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 5
+                                },
+                                {
+                                    "@_Name": "EmployeeID",
+                                    "@_Type": "Edm.Int32"
+                                },
+                                {
+                                    "@_Name": "OrderDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "RequiredDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "ShippedDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "ShipVia",
+                                    "@_Type": "Edm.Int32"
+                                },
+                                {
+                                    "@_Name": "Freight",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                },
+                                {
+                                    "@_Name": "ShipName",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "ShipAddress",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 60
+                                },
+                                {
+                                    "@_Name": "ShipCity",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "ShipRegion",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "ShipPostalCode",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 10
+                                },
+                                {
+                                    "@_Name": "ShipCountry",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "CompanyName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "Address",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 60
+                                },
+                                {
+                                    "@_Name": "City",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "Region",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "PostalCode",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 10
+                                },
+                                {
+                                    "@_Name": "Country",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 15
+                                }
+                            ],
+                            "@_Name": "Orders_Qry"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": [
+                                    {
+                                        "@_Name": "CategoryName"
+                                    },
+                                    {
+                                        "@_Name": "ProductName"
+                                    }
+                                ]
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "CategoryName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "ProductName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "ProductSales",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                }
+                            ],
+                            "@_Name": "Product_Sales_for_1997"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "ProductName"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "ProductName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "UnitPrice",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                }
+                            ],
+                            "@_Name": "Products_Above_Average_Price"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": [
+                                    {
+                                        "@_Name": "CategoryName"
+                                    },
+                                    {
+                                        "@_Name": "Discontinued"
+                                    },
+                                    {
+                                        "@_Name": "ProductName"
+                                    }
+                                ]
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "CategoryName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "ProductName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "QuantityPerUnit",
+                                    "@_Type": "Edm.String",
+                                    "@_MaxLength": 20
+                                },
+                                {
+                                    "@_Name": "UnitsInStock",
+                                    "@_Type": "Edm.Int16"
+                                },
+                                {
+                                    "@_Name": "Discontinued",
+                                    "@_Type": "Edm.Boolean",
+                                    "@_Nullable": false
+                                }
+                            ],
+                            "@_Name": "Products_by_Category"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": [
+                                    {
+                                        "@_Name": "CategoryID"
+                                    },
+                                    {
+                                        "@_Name": "CategoryName"
+                                    },
+                                    {
+                                        "@_Name": "ProductName"
+                                    }
+                                ]
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "CategoryID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "CategoryName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 15
+                                },
+                                {
+                                    "@_Name": "ProductName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "ProductSales",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                }
+                            ],
+                            "@_Name": "Sales_by_Category"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": [
+                                    {
+                                        "@_Name": "CompanyName"
+                                    },
+                                    {
+                                        "@_Name": "OrderID"
+                                    }
+                                ]
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "SaleAmount",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                },
+                                {
+                                    "@_Name": "OrderID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "CompanyName",
+                                    "@_Type": "Edm.String",
+                                    "@_Nullable": false,
+                                    "@_MaxLength": 40
+                                },
+                                {
+                                    "@_Name": "ShippedDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                }
+                            ],
+                            "@_Name": "Sales_Totals_by_Amount"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "OrderID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "ShippedDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "OrderID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "Subtotal",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                }
+                            ],
+                            "@_Name": "Summary_of_Sales_by_Quarter"
+                        },
+                        {
+                            "Key": {
+                                "PropertyRef": {
+                                    "@_Name": "OrderID"
+                                }
+                            },
+                            "Property": [
+                                {
+                                    "@_Name": "ShippedDate",
+                                    "@_Type": "Edm.DateTimeOffset"
+                                },
+                                {
+                                    "@_Name": "OrderID",
+                                    "@_Type": "Edm.Int32",
+                                    "@_Nullable": false
+                                },
+                                {
+                                    "@_Name": "Subtotal",
+                                    "@_Type": "Edm.Decimal",
+                                    "@_Precision": 19,
+                                    "@_Scale": 4
+                                }
+                            ],
+                            "@_Name": "Summary_of_Sales_by_Year"
+                        }
+                    ],
+                    "@_Namespace": "NorthwindModel"
+                },
+                {
+                    "EntityContainer": {
+                        "EntitySet": [
+                            {
+                                "NavigationPropertyBinding": {
+                                    "@_Path": "Products",
+                                    "@_Target": "Products"
+                                },
+                                "@_Name": "Categories",
+                                "@_EntityType": "NorthwindModel.Category"
+                            },
+                            {
+                                "NavigationPropertyBinding": {
+                                    "@_Path": "Customers",
+                                    "@_Target": "Customers"
+                                },
+                                "@_Name": "CustomerDemographics",
+                                "@_EntityType": "NorthwindModel.CustomerDemographic"
+                            },
+                            {
+                                "NavigationPropertyBinding": [
+                                    {
+                                        "@_Path": "CustomerDemographics",
+                                        "@_Target": "CustomerDemographics"
+                                    },
+                                    {
+                                        "@_Path": "Orders",
+                                        "@_Target": "Orders"
+                                    }
+                                ],
+                                "@_Name": "Customers",
+                                "@_EntityType": "NorthwindModel.Customer"
+                            },
+                            {
+                                "NavigationPropertyBinding": [
+                                    {
+                                        "@_Path": "Employees1",
+                                        "@_Target": "Employees"
+                                    },
+                                    {
+                                        "@_Path": "Employee1",
+                                        "@_Target": "Employees"
+                                    },
+                                    {
+                                        "@_Path": "Orders",
+                                        "@_Target": "Orders"
+                                    },
+                                    {
+                                        "@_Path": "Territories",
+                                        "@_Target": "Territories"
+                                    }
+                                ],
+                                "@_Name": "Employees",
+                                "@_EntityType": "NorthwindModel.Employee"
+                            },
+                            {
+                                "NavigationPropertyBinding": [
+                                    {
+                                        "@_Path": "Order",
+                                        "@_Target": "Orders"
+                                    },
+                                    {
+                                        "@_Path": "Product",
+                                        "@_Target": "Products"
+                                    }
+                                ],
+                                "@_Name": "Order_Details",
+                                "@_EntityType": "NorthwindModel.Order_Detail"
+                            },
+                            {
+                                "NavigationPropertyBinding": [
+                                    {
+                                        "@_Path": "Customer",
+                                        "@_Target": "Customers"
+                                    },
+                                    {
+                                        "@_Path": "Employee",
+                                        "@_Target": "Employees"
+                                    },
+                                    {
+                                        "@_Path": "Order_Details",
+                                        "@_Target": "Order_Details"
+                                    },
+                                    {
+                                        "@_Path": "Shipper",
+                                        "@_Target": "Shippers"
+                                    }
+                                ],
+                                "@_Name": "Orders",
+                                "@_EntityType": "NorthwindModel.Order"
+                            },
+                            {
+                                "NavigationPropertyBinding": [
+                                    {
+                                        "@_Path": "Category",
+                                        "@_Target": "Categories"
+                                    },
+                                    {
+                                        "@_Path": "Order_Details",
+                                        "@_Target": "Order_Details"
+                                    },
+                                    {
+                                        "@_Path": "Supplier",
+                                        "@_Target": "Suppliers"
+                                    }
+                                ],
+                                "@_Name": "Products",
+                                "@_EntityType": "NorthwindModel.Product"
+                            },
+                            {
+                                "NavigationPropertyBinding": {
+                                    "@_Path": "Territories",
+                                    "@_Target": "Territories"
+                                },
+                                "@_Name": "Regions",
+                                "@_EntityType": "NorthwindModel.Region"
+                            },
+                            {
+                                "NavigationPropertyBinding": {
+                                    "@_Path": "Orders",
+                                    "@_Target": "Orders"
+                                },
+                                "@_Name": "Shippers",
+                                "@_EntityType": "NorthwindModel.Shipper"
+                            },
+                            {
+                                "NavigationPropertyBinding": {
+                                    "@_Path": "Products",
+                                    "@_Target": "Products"
+                                },
+                                "@_Name": "Suppliers",
+                                "@_EntityType": "NorthwindModel.Supplier"
+                            },
+                            {
+                                "NavigationPropertyBinding": [
+                                    {
+                                        "@_Path": "Employees",
+                                        "@_Target": "Employees"
+                                    },
+                                    {
+                                        "@_Path": "Region",
+                                        "@_Target": "Regions"
+                                    }
+                                ],
+                                "@_Name": "Territories",
+                                "@_EntityType": "NorthwindModel.Territory"
+                            },
+                            {
+                                "@_Name": "Alphabetical_list_of_products",
+                                "@_EntityType": "NorthwindModel.Alphabetical_list_of_product"
+                            },
+                            {
+                                "@_Name": "Category_Sales_for_1997",
+                                "@_EntityType": "NorthwindModel.Category_Sales_for_1997"
+                            },
+                            {
+                                "@_Name": "Current_Product_Lists",
+                                "@_EntityType": "NorthwindModel.Current_Product_List"
+                            },
+                            {
+                                "@_Name": "Customer_and_Suppliers_by_Cities",
+                                "@_EntityType": "NorthwindModel.Customer_and_Suppliers_by_City"
+                            },
+                            {
+                                "@_Name": "Invoices",
+                                "@_EntityType": "NorthwindModel.Invoice"
+                            },
+                            {
+                                "@_Name": "Order_Details_Extendeds",
+                                "@_EntityType": "NorthwindModel.Order_Details_Extended"
+                            },
+                            {
+                                "@_Name": "Order_Subtotals",
+                                "@_EntityType": "NorthwindModel.Order_Subtotal"
+                            },
+                            {
+                                "@_Name": "Orders_Qries",
+                                "@_EntityType": "NorthwindModel.Orders_Qry"
+                            },
+                            {
+                                "@_Name": "Product_Sales_for_1997",
+                                "@_EntityType": "NorthwindModel.Product_Sales_for_1997"
+                            },
+                            {
+                                "@_Name": "Products_Above_Average_Prices",
+                                "@_EntityType": "NorthwindModel.Products_Above_Average_Price"
+                            },
+                            {
+                                "@_Name": "Products_by_Categories",
+                                "@_EntityType": "NorthwindModel.Products_by_Category"
+                            },
+                            {
+                                "@_Name": "Sales_by_Categories",
+                                "@_EntityType": "NorthwindModel.Sales_by_Category"
+                            },
+                            {
+                                "@_Name": "Sales_Totals_by_Amounts",
+                                "@_EntityType": "NorthwindModel.Sales_Totals_by_Amount"
+                            },
+                            {
+                                "@_Name": "Summary_of_Sales_by_Quarters",
+                                "@_EntityType": "NorthwindModel.Summary_of_Sales_by_Quarter"
+                            },
+                            {
+                                "@_Name": "Summary_of_Sales_by_Years",
+                                "@_EntityType": "NorthwindModel.Summary_of_Sales_by_Year"
+                            }
+                        ],
+                        "@_Name": "NorthwindEntities",
+                        "@_LazyLoadingEnabled": true
+                    },
+                    "@_Namespace": "ODataWebExperimental.Northwind.Model"
+                }
+            ]
+        },
+        "@_Version": 4
+    }
+}
