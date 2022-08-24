@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Generate TypeScript types from OData metadata",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build-ts": "tsc --sourceMap"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jbm1991/odata-ts-types.git"
