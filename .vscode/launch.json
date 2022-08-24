@@ -11,7 +11,7 @@
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/src/index.ts",
       "outFiles": ["${workspaceFolder}/**/*.js"],
-      "args": ["-f=file.txt", "-o=out.txt"]
+      "args": ["-f=sample-data/metadata.xml", "-o=sammple-data/metadata.json"]
     }
   ]
 }
